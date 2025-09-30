@@ -7,7 +7,7 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.model.pass.PassField
 import org.ligi.passandroid.model.pass.PassImpl
 import org.ligi.passandroid.ui.PassEditActivity
@@ -25,7 +25,7 @@ class TheFieldListEditFragment {
 
     private val field: PassField = PassField(null, "labelfieldcontent", "valuefieldcontent", false)
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testFieldDetailsArePreFilled() {
 
         rule.screenShot("one_field")
@@ -40,7 +40,7 @@ class TheFieldListEditFragment {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testThatChangingLabelWorks() {
 
         onView(withId(R.id.label_field_edit)).perform(scrollTo())
@@ -48,7 +48,7 @@ class TheFieldListEditFragment {
         assertThat(field.label).isEqualTo("newlabel")
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testThatChangingValueWorks() {
 
         onView(withId(R.id.value_field_edit)).perform(scrollTo())

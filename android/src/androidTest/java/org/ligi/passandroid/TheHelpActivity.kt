@@ -6,7 +6,7 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.functions.checkThatHelpIsThere
 import org.ligi.passandroid.ui.HelpActivity
 import org.ligi.trulesk.TruleskActivityRule

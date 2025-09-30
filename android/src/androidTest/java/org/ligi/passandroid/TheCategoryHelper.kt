@@ -1,7 +1,7 @@
 package org.ligi.passandroid
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.functions.getHumanCategoryString
 import org.ligi.passandroid.model.PassDefinitions
 

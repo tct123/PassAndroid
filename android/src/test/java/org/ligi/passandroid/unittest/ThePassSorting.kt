@@ -1,8 +1,9 @@
 package org.ligi.passandroid.unittest
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.Before
-import org.junit.Test
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.BeforeEach
 import org.ligi.passandroid.model.comparator.PassSortOrder
 import org.ligi.passandroid.model.pass.Pass
 import org.ligi.passandroid.model.pass.PassImpl
@@ -20,7 +21,7 @@ class ThePassSorting {
 
     private lateinit var passList: List<Pass>
 
-    @Before
+    @BeforeEach
     fun init() {
         pass1.calendarTimespan = PassImpl.TimeSpan(ZonedDateTime.now().minusHours(5))
         pass3.calendarTimespan = PassImpl.TimeSpan(ZonedDateTime.now().plusHours(1))
@@ -57,7 +58,7 @@ class ThePassSorting {
         assertThat(passList).containsExactly(pass3, pass2, pass5, pass1, pass4)
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testTYPE() {
         Collections.sort(passList, PassSortOrder.TYPE.toComparator())
 

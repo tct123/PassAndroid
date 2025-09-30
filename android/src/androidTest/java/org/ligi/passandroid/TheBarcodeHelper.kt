@@ -2,7 +2,7 @@ package org.ligi.passandroid
 
 import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Fail.fail
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.functions.generateBarCodeBitmap
 import org.ligi.passandroid.functions.getBitMatrix
 import org.ligi.passandroid.model.pass.PassBarCodeFormat
@@ -29,7 +29,7 @@ class TheBarcodeHelper {
         testBitMatrixSizeIsSane(PassBarCodeFormat.PDF_417)
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testAZTECBitmapHasCorrectSize() {
         testBitmapSizeIsSane(PassBarCodeFormat.AZTEC)
     }

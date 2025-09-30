@@ -10,7 +10,7 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.functions.decodeBarCode
 import org.ligi.passandroid.model.pass.BarCode
 import org.ligi.passandroid.model.pass.PassBarCodeFormat
@@ -27,7 +27,7 @@ class TheFullscreenBarcodeActivity {
     @get:Rule
     var rule = TruleskIntentRule(FullscreenBarcodeActivity::class.java, false)
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testPDF417BarcodeIsShown() {
         testWithBarcodeFormat(PDF_417)
 
@@ -42,7 +42,7 @@ class TheFullscreenBarcodeActivity {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testQRCodeIsShown() {
         testWithBarcodeFormat(QR_CODE)
 
@@ -57,7 +57,7 @@ class TheFullscreenBarcodeActivity {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testCode39CodeIsShown() {
         testWithBarcodeFormat(CODE_39)
 

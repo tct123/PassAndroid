@@ -6,7 +6,7 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import org.hamcrest.CoreMatchers.not
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.model.pass.PassImpl
 import org.ligi.passandroid.model.pass.PassLocation
 import org.ligi.passandroid.ui.PassListActivity
@@ -24,7 +24,7 @@ class ThePassViewHolder {
     @get:Rule
     var rule = TruleskActivityRule(PassListActivity::class.java, false)
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun locationButtonShouldBeVisibleIfWeHaveALocation() {
 
         currentPass.locations = listOf(PassLocation())

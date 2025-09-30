@@ -17,7 +17,7 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import org.hamcrest.Matchers.allOf
 import org.hamcrest.Matchers.not
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.R.string.*
 import org.ligi.passandroid.ui.PassListActivity
 import org.ligi.passandroid.ui.PreferenceActivity

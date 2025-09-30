@@ -6,7 +6,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import org.hamcrest.CoreMatchers.containsString
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.model.pass.PassField
 import org.ligi.passandroid.model.pass.PassImpl
 import org.ligi.passandroid.ui.PassListActivity
@@ -25,7 +25,7 @@ class TheCondensedPassViewMode {
         currentPass.fields = mutableListOf(PassField("textprobe", "bar", "yo", false))
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testDateShowsForCondensedOff() {
         `when`(TestApp.settings.isCondensedModeEnabled()).thenReturn(false)
 
@@ -38,7 +38,7 @@ class TheCondensedPassViewMode {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testFieldShowsForCondensedOn() {
 
         `when`(TestApp.settings.isCondensedModeEnabled()).thenReturn(true)

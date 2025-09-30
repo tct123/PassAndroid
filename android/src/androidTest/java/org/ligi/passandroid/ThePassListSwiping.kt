@@ -8,7 +8,7 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.ui.PassListActivity
 import org.ligi.passandroid.ui.PassListFragment
 import org.ligi.trulesk.TruleskIntentRule
@@ -60,7 +60,7 @@ class ThePassListSwiping {
         onView(withText(R.string.move_to_new_topic)).check(matches(isDisplayed()))
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testDialogOpensWhenSwipeRight() {
 
         fakeSwipeRight()

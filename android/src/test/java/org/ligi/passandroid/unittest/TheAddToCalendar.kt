@@ -1,7 +1,7 @@
 package org.ligi.passandroid.unittest
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.functions.createIntent
 import org.ligi.passandroid.model.pass.Pass
 import org.ligi.passandroid.model.pass.PassImpl
@@ -30,19 +30,19 @@ class TheAddToCalendar {
         createIntent(mock(Pass::class.java), mock(PassImpl.TimeSpan::class.java))
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun descriptionShouldShow() {
         val tested = createIntent(pass, validTimeSpan)
         assertThat(tested.getStringExtra("title")).isEqualTo(DESCRIPTIONPROBE)
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun typeIsCorrect() {
         val tested = createIntent(pass, validTimeSpan)
         assertThat(tested.type).isEqualTo("vnd.android.cursor.item/event")
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun locationIsCorrect() {
         `when`(pass.locations).thenReturn(listOf(PassLocation().apply { name = LOCATIONPROBE }))
 

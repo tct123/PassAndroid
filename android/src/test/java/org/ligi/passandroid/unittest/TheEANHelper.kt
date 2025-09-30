@@ -1,7 +1,7 @@
 package org.ligi.passandroid.unittest
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.ui.edit.getRandomEAN13
 import org.ligi.passandroid.ui.edit.isValidEAN13
 
@@ -12,7 +12,7 @@ class TheEANHelper {
         assertThat(getRandomEAN13().length).isEqualTo(13)
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun acceptGoodEAN13() {
         assertThat(isValidEAN13("6416016588755")).isTrue
     }

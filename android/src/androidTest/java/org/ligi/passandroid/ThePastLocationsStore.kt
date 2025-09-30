@@ -5,9 +5,9 @@ import android.content.SharedPreferences
 import androidx.core.content.edit
 import androidx.test.platform.app.InstrumentationRegistry
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.After
+import org.junit.jupiter.api.AfterEach
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.model.PastLocationsStore
 import org.ligi.passandroid.ui.PassViewActivity
 import org.ligi.trulesk.TruleskActivityRule
@@ -27,12 +27,12 @@ class ThePastLocationsStore {
 
     private val prefs: SharedPreferences by lazy { InstrumentationRegistry.getInstrumentation().context.getSharedPreferences("" + System.currentTimeMillis() / 100000, Context.MODE_PRIVATE) }
 
-    @After
+    @AfterEach
     fun tearDown() {
         prefs.edit { clear() }
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testPastLocationsStoreShouldNeverContainMoreThanMaxElements() {
         val tested = PastLocationsStore(prefs, tracker)
 

@@ -10,7 +10,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withText
 import com.linkedin.android.testbutler.TestButler
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.model.AndroidSettings
 import org.ligi.passandroid.model.comparator.PassByTimeComparator
 import org.ligi.passandroid.model.comparator.PassByTypeFirstAndTimeSecondComparator
@@ -80,7 +80,7 @@ class ThePreferenceActivity {
         }
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun weCanSetAllNightModes() {
 
         val resources = rule.activity.resources

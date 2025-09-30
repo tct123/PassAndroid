@@ -2,8 +2,9 @@ package org.ligi.passandroid;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 import java.io.InputStream;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.ligi.passandroid.model.InputStreamWithSource;
 import org.ligi.passandroid.model.PassStore;
 import org.ligi.passandroid.ui.UnzipPassController;
@@ -26,7 +27,7 @@ public class TheUnzipPassController  {
     @Mock
     PassStore passStore;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         MockitoAnnotations.initMocks(this);
     }

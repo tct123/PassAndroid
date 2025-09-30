@@ -8,7 +8,7 @@ import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.R.id.pass_recyclerview
 import org.ligi.passandroid.functions.checkThatHelpIsThere
 import org.ligi.passandroid.functions.expand
@@ -24,14 +24,14 @@ class ThePassListActivity {
         TestApp.populatePassStoreWithSinglePass()
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testListIsThere() {
 
         onView(withId(pass_recyclerview)).check(matches(isDisplayed()))
         rule.screenShot("list")
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testHelpMenuBringsUsToHelp() {
         onView(withId(R.id.menu_help)).perform(click())
 

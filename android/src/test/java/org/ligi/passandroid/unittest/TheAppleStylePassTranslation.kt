@@ -1,7 +1,7 @@
 package org.ligi.passandroid.unittest
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.model.AppleStylePassTranslation
 
 class TheAppleStylePassTranslation {
@@ -13,7 +13,7 @@ class TheAppleStylePassTranslation {
         assertThat(tested.translate(null)).isNull()
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testThatBasicParsingWorks() {
         val tested = AppleStylePassTranslation()
         tested.loadFromString("\"foo\"=\"bar\";")

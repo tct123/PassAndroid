@@ -14,7 +14,7 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import org.hamcrest.CoreMatchers.not
 import org.hamcrest.Matchers.allOf
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.functions.DEFAULT_EVENT_LENGTH_IN_HOURS
 import org.ligi.passandroid.model.pass.PassImpl
 import org.ligi.passandroid.ui.PassListActivity
@@ -29,7 +29,7 @@ class TheAddToCalendar {
     @get:Rule
     var rule = TruleskIntentRule(PassListActivity::class.java, false)
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testIfWeOnlyHaveCalendarStartDate() {
         TestApp.populatePassStoreWithSinglePass()
 
@@ -48,7 +48,7 @@ class TheAddToCalendar {
         ))
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testIfWeOnlyHaveCalendarEndDate() {
         TestApp.populatePassStoreWithSinglePass()
 
@@ -67,7 +67,7 @@ class TheAddToCalendar {
         ))
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testIfWeOnlyHaveCalendarStartAndEndDate() {
         TestApp.populatePassStoreWithSinglePass()
 
@@ -87,7 +87,7 @@ class TheAddToCalendar {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testIfWeOnlyHaveExpirationDate() {
         TestApp.populatePassStoreWithSinglePass()
 
@@ -153,7 +153,7 @@ class TheAddToCalendar {
         ))
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testThereIsNoButtonWithNoDate() {
         TestApp.populatePassStoreWithSinglePass()
         rule.launchActivity()

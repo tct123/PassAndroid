@@ -1,7 +1,7 @@
 package org.ligi.passandroid.unittest
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.Tracker
 import org.ligi.passandroid.model.ApplePassbookQuirkCorrector
 import org.ligi.passandroid.model.pass.PassField
@@ -25,7 +25,7 @@ class TheAppleStyleQuirkCorrector {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testThatDateIsExtracted() {
         val pass = PassImpl(UUID.randomUUID().toString())
 
@@ -36,7 +36,7 @@ class TheAppleStyleQuirkCorrector {
         assertThat(pass.calendarTimespan!!.from).isEqualTo(ZonedDateTime.parse(DATE_PROBE))
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testThatInvalidDateIsIgnored() {
         val pass = PassImpl(UUID.randomUUID().toString())
 
@@ -47,7 +47,7 @@ class TheAppleStyleQuirkCorrector {
         assertThat(pass.calendarTimespan).isNull()
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testThatDateIsExtractedAfterWrongDatesBefore() {
         val pass = PassImpl(UUID.randomUUID().toString())
 

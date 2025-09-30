@@ -1,7 +1,7 @@
 package org.ligi.passandroid.unittest
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.model.PassClassifier
 import org.ligi.passandroid.model.PassStore
 import org.ligi.passandroid.model.pass.Pass

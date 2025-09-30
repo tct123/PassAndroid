@@ -13,7 +13,7 @@ import androidx.test.filters.SdkSuppress
 import com.linkedin.android.testbutler.TestButler
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.junit.runner.RunWith
 import org.ligi.passandroid.model.PassStore
 import org.ligi.passandroid.model.pass.PassBarCodeFormat
@@ -45,7 +45,7 @@ class TheBarCodeEditing {
         closeSoftKeyboard()
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testNullBarcodeShowButtonAppears() {
 
         start {
@@ -59,7 +59,7 @@ class TheBarCodeEditing {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testCreateBarcodeDefaultsToQR() {
 
         start {
@@ -76,7 +76,7 @@ class TheBarCodeEditing {
     }
 
     @SdkSuppress(minSdkVersion = 14)
-    @Test
+    @org.junit.jupiter.api.Test
     fun testCanSetToAllBarcodeTypes() {
         start()
         for (passBarCodeFormat in PassBarCodeFormat.values()) {
@@ -95,7 +95,7 @@ class TheBarCodeEditing {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testCanSetMessage() {
         start()
 
@@ -115,7 +115,7 @@ class TheBarCodeEditing {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testCanSetAltMessage() {
         start()
 
@@ -134,7 +134,7 @@ class TheBarCodeEditing {
         rule.screenShot("edit_set_altmsg")
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testThatRandomChangesMessage() {
         start()
 

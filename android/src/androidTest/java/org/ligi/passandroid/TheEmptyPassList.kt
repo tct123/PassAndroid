@@ -6,7 +6,7 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
 import org.ligi.passandroid.R.id.emptyView
 import org.ligi.passandroid.functions.checkThatHelpIsThere
 import org.ligi.passandroid.ui.PassListActivity
@@ -20,13 +20,13 @@ class TheEmptyPassList {
         TestApp.emptyPassStore()
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testEmptyViewIsThereWhenThereAreNoPasses() {
         rule.screenShot("empty_view")
         onView(withId(emptyView)).check(matches(isDisplayed()))
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testHelpGoesToHelp() {
         onView(withId(R.id.menu_help)).perform(click())
 
