@@ -1,9 +1,9 @@
 buildscript {
     ext {
-        kotlin_version = '1.9.0'
+        kotlin_version = '2.2.20'
 	// wait for upstream https://github.com/mockito/mockito/issues/2007
-        mockito_version = '3.4.6'
-        threetenbp_version = '1.6.8'
+        mockito_version = '5.20.0'
+        threetenbp_version = '1.7.2'
         kotpref_version = '2.13.2'
     }
 
@@ -16,7 +16,7 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.android.tools.build:gradle:8.5.2'
+        classpath 'com.android.tools.build:gradle:8.13.0'
         classpath 'com.trevjonez.composer:plugin:1.0.0-rc08'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.47.0'
         classpath 'com.github.bjoernq:unmockplugin:0.7.9'
