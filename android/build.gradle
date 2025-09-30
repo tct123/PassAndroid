@@ -18,7 +18,7 @@ android {
         versionCode 373
         versionName "3.7.3"
         minSdkVersion 23
-        targetSdkVersion 33
+        targetSdk 36
         applicationId "org.ligi.passandroid"
         namespace "org.ligi.passandroid"
         testInstrumentationRunner "org.ligi.passandroid.AppReplacingRunner"
@@ -99,7 +99,7 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = JavaVersion.VERSION_17
     }
     namespace 'org.ligi.passandroid'
     lint {
@@ -107,6 +107,8 @@ android {
         disable 'NullSafeMutableLiveData'
         warning 'MissingTranslation', 'InvalidPackage'
     }
+    buildToolsVersion '36.0.0'
+    ndkVersion '27.1.12297006'
 }
 
 dependencies {
